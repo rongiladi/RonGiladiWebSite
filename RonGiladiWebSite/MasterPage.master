@@ -8,15 +8,28 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <h1>Master Start</h1>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
-    <h1>Master End</h1>
+<body> 
+    <center>
+    <table width="90%" height="800px" border="1">
+        <tr height="100px"> 
+           <td clospan="2" align="center"> 
+               <h1>Ron giladi's website</h1>
+           </td>
+        </tr>
+            <td>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </td>
+            <td>
+                ניווט<br />
+                <a href="HomePage.aspx">דף הבית</a><br />
+                <a href="">אודות</a><br />
+            </td>
+        <tr>
+            <p></p>
+        </tr>
+    </table>
+        </center>
 </body>
 </html>
