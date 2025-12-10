@@ -16,18 +16,17 @@
                <h1>Ron giladi's website</h1>
            </td>
         </tr>
+        <tr>
             <td>
-                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
                 </asp:ContentPlaceHolder>
             </td>
-            <td>
-                ניווט<br />
+            <td width="10%">
+                <h2>ניווט</h2><br />
                 <a href="HomePage.aspx">דף הבית</a><br />
-                <a href="">אודות</a><br />
+                <a href="form.aspx">form.aspx</a><br />
             </td>
-        <tr>
-            <p></p>
         </tr>
     </table>
         </center>
