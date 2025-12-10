@@ -24,7 +24,7 @@
             </td>
             <td width="10%">
                 <h2>ניווט</h2><br />
-                <a href="HomePage.aspx">דף הבית</a><br />
+                <a href="HomePage.aspx"></a><br />
                 <a href="form.aspx">form.aspx</a><br />
             </td>
         </tr>
