@@ -7,6 +7,7 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    
 </head>
 <body> 
     <center>
@@ -24,8 +25,9 @@
             </td>
             <td width="10%">
                 <h2>ניווט</h2><br />
-                <a href="HomePage.aspx"></a><br />
+                <a href="HomePage.aspx"><img src="Images/מאמר%201%20תמונה.png" class="button" /></a><br />
                 <a href="form.aspx">form.aspx</a><br />
+                <a href="makingContact">makingCotact.aspx</a><br />
             </td>
         </tr>
     </table>
