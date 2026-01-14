@@ -13,7 +13,7 @@
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
-        table {
+        table.a {
             width: 90%;
             height: 800px;
             border: 2px solid #333333;
@@ -47,7 +47,7 @@
 </head>
 <body> 
     <center>
-   <table>
+   <table class="a">
     <tr height="100px"> 
         <td colspan="2" align="center"> 
             <h1>Ron giladi's website</h1>
@@ -80,7 +80,12 @@
             </a><br /><br />
             <a href="מדיניות.aspx">
                 <img src="Images/מדיניות פרטיות תמונה.png" />
-            </a>
+            </a><br /><br />
+            <a href="דף התחברות.aspx">
+                <img src="Images/דף התחברות תמונה.png" />
+            </a><br /><br />
+            <a href="login.aspx">
+                <img src="Images/דף login.png" />
         </td>
     </tr>
 </table>
