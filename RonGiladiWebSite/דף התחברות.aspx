@@ -41,8 +41,8 @@
     </tr>
     <td clospan="2" >מאשר את פרטי השימוש?
         <br />
-    NIKE<input type="radio" id="nike" name="radio1" />
-    ADIDAS<input type="radio" id="adidas" name="radio1">
+    לא מאשר<input type="radio" id="nike" name="radio1" />
+    מאשר<input type="radio" id="adidas" name="radio1">
     </td>
     <tr>
         <td colspan="2" align="center">
