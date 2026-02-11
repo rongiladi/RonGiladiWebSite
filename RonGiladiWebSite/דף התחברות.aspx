@@ -19,16 +19,16 @@
     </tr>
 
     <tr>
-        <td>מין:</td>
-        <td>
-            <select required>
-                <option value=""></option>
-                <option>זכר</option>
-                <option>נקבה</option>
-                <option>אין דבר כזה אחר סתמו</option>
-            </select>
-        </td>
-    </tr>
+    <td>מין:</td>
+    <td>
+        <select name="gender" required>
+            <option value=""></option>
+            <option value="זכר">זכר</option>
+            <option value="נקבה">נקבה</option>
+            <option value="אחר">אין דבר כזה אחר סתמו</option>
+        </select>
+    </td>
+</tr>
 
     <tr>
         <td>אימייל:</td>
@@ -39,11 +39,13 @@
         <td>סיסמה:</td>
         <td><input type="text" id="password" name="password"></td>
     </tr>
-    <td clospan="2" >מאשר את פרטי השימוש?
+    <tr>
+    <td colspan="2">מאשר את פרטי השימוש?
         <br />
-    לא מאשר<input type="radio" id="nike" name="radio1" />
-    מאשר<input type="radio" id="adidas" name="radio1">
+        לא מאשר <input type="radio" id="notAgree" name="agree" value="לא" />
+        מאשר <input type="radio" id="agree" name="agree" value="כן">
     </td>
+</tr>
     <tr>
         <td colspan="2" align="center">
             <input type="submit" value="שלח">
@@ -52,6 +54,8 @@
 </table>
 </center>
 </form>
+
+    <%=stResult %>
 
 </asp:Content>
 
