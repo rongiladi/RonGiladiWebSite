@@ -26,5 +26,5 @@
     <a href="דף התחברות.aspx"> כאן </a>
 </center>
 </form>
-
+    <%=stResult%>
 </asp:Content>

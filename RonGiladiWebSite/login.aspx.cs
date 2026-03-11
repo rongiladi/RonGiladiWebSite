@@ -25,15 +25,15 @@ public partial class login :  System.Web.UI.Page
                 // בדיקת משתמש רגיל
                 string sqlSelect =
                     "SELECT * FROM tUsers " +
-                    "WHERE Email = N'" + mail + "' " +
-                    "AND UserPassword = N'" + password + "'";
+                    "WHERE email = N'" + mail + "' " +
+                    "AND password = N'" + password + "'";
 
                 bool userExists = MyAdoHelper.IsExist(sqlSelect);
 
                 if (!userExists)
                     stResult = "אימייל או סיסמה שגויים";
                 else
-                    stResult = "משתמש רשום";
+                    Response.Redirect("HomePage.aspx");
             }
         }
     }

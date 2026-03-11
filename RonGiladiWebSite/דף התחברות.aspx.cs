@@ -20,33 +20,33 @@ public partial class דף_התחברות :  System.Web.UI.Page
             string password = Request.Form["password"]; // סיסמה
             string agree = Request.Form["agree"];   // אישור תנאים
 
+            string sqlCheck =
+
+           "SELECT * FROM tUsers WHERE email = N'" + mail + "'";
+
+            bool exists = MyAdoHelper.IsExist(sqlCheck);
+
+            if (exists)
+                stResult = "מייל שהוכנס קיים במערכת, הכנס אימייל חדש";
+            else
+            {
 
 
-            /*
-            //האם המשתמש קיים?
-            //לפי אימייל
-            //אם לא קיים
-            //עושים ISERTR
-            //ובמקום לכתוב נרשמת בהצלחה
-            //Response.Redirect("login.aspx");
-            //אם קיים
-            //stResult="המשתמש קיים"
-            */
-
-            string sqlInsert =
-                "INSERT INTO tUsers  " +
-                "VALUES (" +
-                "N'" + fn + "', " +
-                "N'" + ln + "', " +
-                "N'" + gender + "', " +
-                "N'" + mail + "', " +
-                "N'" + password + "', " +
-                "N'" + agree + "')";
+                string sqlInsert =
+                    "INSERT INTO tUsers  " +
+                    "VALUES (" +
+                    "N'" + fn + "', " +
+                    "N'" + ln + "', " +
+                    "N'" + gender + "', " +
+                    "N'" + mail + "', " +
+                    "N'" + password + "', " +
+                    "N'" + agree + "')";
 
 
-            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
-
-            stResult = "נרשמת בהצלחה!";
+                MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+                Response.Redirect("HomePage.aspx");
+            }
         }
+
     }
 }
