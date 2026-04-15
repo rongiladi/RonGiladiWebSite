@@ -1,14 +1,12 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-        /* רקע לעמוד, נעזרתי בבניה מלאכותית רק לעיצוב  */
         body {
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
@@ -41,54 +39,46 @@
         }
         #menu a img:hover {
             border-color: #2c3e50;
-            cursor: pointer;
+            cursor: pointer;    
+        }
+        /* עיצוב הלוגו בפינה השמאלית */
+        .logo-style {
+            width: 360px; /* ניתן לשנות את הגודל לפי הצורך */
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body> 
     <center>
-   <table class="a">
-    <tr height="100px"> 
-        <td colspan="2" align="center"> 
-            <h1>Ron giladi's website</h1>
-        </td>
-    </tr>
-    <tr>
-        <td valign="top">
-            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </td>
-        <td id="menu" width="15%" valign="top" align="center">
-            <h2>ניווט</h2><br />
-            <a href="HomePage.aspx">
-                <img src="Images/דף הבית תמונה.png" />
-            </a><br /><br />
-            <a href="מאמר1.aspx">
-                <img src="Images/מאמר 1 תמונה.png" />
-            </a><br /><br />
-            <a href="מאמר2.aspx">
-                <img src="Images/מאמר 2 תמונה.png" />
-            </a><br /><br />
-            <a href="מאמר3.aspx">
-                <img src="Images/מאמר 3 תמונה.png" />
-            </a><br /><br />
-            <a href="form.aspx">
-                <img src="Images/Forms.aspx תמונה.png" />
-            </a><br /><br />
-            <a href="יצירת קשר.aspx">
-                <img src="Images/יצירת קשר תמונה.png" />
-            </a><br /><br />
-            <a href="מדיניות.aspx">
-                <img src="Images/מדיניות פרטיות תמונה.png" />
-            </a><br /><br />
-            <a href="דף התחברות.aspx">
-                <img src="Images/דף התחברות תמונה.png" />
-            </a><br /><br />
-            <a href="login.aspx">
-                <img src="Images/דף login.png" />
-        </td>
-    </tr>
-</table>
-        </center>
+    <table class="a">
+        <!-- שורת כותרת ולוגו -->
+        <tr height="100px"> 
+            <td align="left" valign="middle" style="width: 150px;"> 
+                <img src="Images/logo.png" class="logo-style" alt="Logo" />
+            </td>
+            <td align="right" valign="middle"> 
+                <h1>Ron giladi's website</h1>
+            </td>
+        </tr>
+        <tr>
+            <!-- אזור התוכן המשתנה -->
+            <td valign="top">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            <!-- תפריט הניווט -->
+            <td id="menu" width="15%" valign="top" align="center">
+                <h2>ניווט</h2><br />
+                <a href="HomePage.aspx"><img src="Images/דף הבית תמונה.png" /></a><br /><br />
+                <a href="form.aspx"><img src="Images/Forms.aspx תמונה.png" /></a><br /><br />
+                <a href="יצירת קשר.aspx"><img src="Images/יצירת קשר תמונה.png" /></a><br /><br />
+                <a href="מדיניות.aspx"><img src="Images/מדיניות פרטיות תמונה.png" /></a><br /><br />
+                <a href="דף התחברות.aspx"><img src="Images/דף התחברות תמונה.png" /></a><br /><br />
+                <a href="login.aspx"><img src="Images/דף login.png" /></a> <!-- תוקן: סגירת תגיות -->
+            </td>
+        </tr>
+    </table>
+    </center>
 </body>
 </html>
