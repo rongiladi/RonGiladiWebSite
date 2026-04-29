@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <center>
-<h1>דף התחברות</h1>
-<h2>הזן פרטי התחברות:</h2>
+<h1>דף הרשמה</h1>
+<h2>הזן פרטי הרשמה:</h2>
 <form runat="server" method="post">
 <table border="1" height="500px">
     <tr>
