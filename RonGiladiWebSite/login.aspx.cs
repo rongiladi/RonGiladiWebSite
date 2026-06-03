@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class login :  System.Web.UI.Page
+public partial class login : System.Web.UI.Page
 {
     public string stResult = "";
     protected void Page_Load(object sender, EventArgs e)
@@ -25,21 +25,29 @@ public partial class login :  System.Web.UI.Page
             }
             else
             {
-                // בדיקת משתמש רגיל
+                // בדיקת משתמש רגיל מול בסיס הנתונים
                 string sqlSelect =
                     "SELECT * FROM tUsers " +
                     "WHERE email = N'" + mail + "' " +
                     "AND password = N'" + password + "'";
 
-                DataTable dt =MyAdoHelper.ExecuteDataTable(sqlSelect);
-                bool userExist = MyAdoHelper.IsExist(sqlSelect);
+                DataTable dt = MyAdoHelper.ExecuteDataTable(sqlSelect);
+
+                // בדיקה: אם לא נמצאו שורות בטבלה, המשתמש אינו רשום
                 if (dt.Rows.Count == 0)
                 {
-                    stResult = "אימייל או סיסמה שגויים";
+                    stResult = "שגיאה: אינך רשום במערכת, או שהפרטים שהזנת שגויים.";
                 }
                 else
+                {
+                    // הוספנו סוגריים מסולסלים כדי ששתי הפעולות יקרו רק כשהתחברות המשתמש מצליחה
                     stResult = "הכניסה הצליחה";
+
+                    // אופציונלי: שמירת שם המשתמש ב-Session אם תרצה להשתמש בו בדפים אחרים
+                    Session["user"] = mail;
+
                     Response.Redirect("HomePage.aspx");
+                }
             }
         }
     }
