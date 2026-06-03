@@ -1,16 +1,39 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="דף התחברות.aspx.cs" Inherits="דף_התחברות" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <script language="javascript">
+        function checkAll() {
+            firstNameErr.innerHTML = "";
+
+            result = true;
+
+            if (checkFirstName() == false)
+                result = false;
+
+            return result;
+        }
+
+        function checkFirstName() {
+            firstname = document.getElementById("firstName").value;
+
+            if (firstname.length < 2) {
+                firstNameErr.innerHTML = "XXX";
+                return false;
+            }
+            return true;
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <center>
 <h1>דף הרשמה</h1>
 <h2>הזן פרטי הרשמה:</h2>
-<form runat="server" method="post">
+<form runat="server" method="post" onsubmit="return checkAll();">
 <table border="1" height="500px">
     <tr>
         <td>שם פרטי:</td>
         <td><input type="text" id="firstName" name="firstname"></td>
+        <td id="firstNameErr"></td>
     </tr>
 
     <tr>
