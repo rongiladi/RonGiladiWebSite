@@ -88,7 +88,7 @@
 
 <table class="a">
 
-    <!-- כותרת -->
+    <!-- כותרת --->
     <tr height="100px"> 
         <td align="right" valign="middle" style="width: 150px;"> 
             <img src="Images/logo.png" class="logo-style" alt="Logo" />
