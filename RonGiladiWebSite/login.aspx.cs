@@ -18,7 +18,7 @@ public partial class login : System.Web.UI.Page
             string password = Request.Form["password"];
 
             // התחברות מנהל
-            if (mail == "rinatMenahel@gmail.com" && password == "menahel1234")
+            if (mail == "ronMenahel@gmail.com" && password == "menahel1234")
             {
                 Session["nihol"] = "ok";
                 Session["user"] = "ok";

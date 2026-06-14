@@ -18,8 +18,8 @@
                 
                 <!-- *** כאן משלבים את התמונה שלך *** -->
                 <!-- כרגע שמתי תמונת דמו מהתיקייה שלך, שנה את השם לקובץ התמונה האמיתי שלך -->
-                <img src="אני.png" alt="רון גלעדי" width="180" style="border-radius: 50%; border: 3px solid #333; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);" />
-                
+
+                <img src="תמונות%20הגלריה/אני.jpg" alt="רון גלעדי" width="180" style="border-radius: 50%; border: 3px solid #333; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);" />
                 <h3 style="margin-top: 15px; margin-bottom: 5px;">פרטים אישיים</h3>
                 <p style="margin: 5px 0;"><strong>תפקיד:</strong> מפתח</p>
                 <p style="margin: 5px 0;"><strong>אימייל:</strong> 1000960433@educ.org.il</p>
